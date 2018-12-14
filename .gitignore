@@ -3,5 +3,6 @@
 *.o
 *.obj
 *.jar
+*.zip
 .idea/
 cmake-build*/
