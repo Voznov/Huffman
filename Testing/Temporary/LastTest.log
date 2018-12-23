@@ -1,0 +1,18 @@
+Start testing: Dec 23 11:39 MSK
+----------------------------------------------------------
+1/1 Testing: Test_5M_0
+1/1 Test: Test_5M_0
+Command: "/home/admin/Projects/Huffman/huffman" "-v" "-c" "smoke_test/5M_0.in" "smoke_test/5M_0.out" "huffman" "-v" "-d" "smoke_test/5M_0.out" "/tmp/5M_0.in" "diff" "-q" "smoke_test/5M_0.in" "/tmp/5M_0.in" "||" "echo" "error"
+Directory: /home/admin/Projects/Huffman
+"Test_5M_0" start time: Dec 23 11:39 MSK
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Failed.
+"Test_5M_0" end time: Dec 23 11:39 MSK
+"Test_5M_0" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 23 11:39 MSK
