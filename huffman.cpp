@@ -293,7 +293,7 @@ void decode(ifstream& inputF, ofstream& outputF, uint16_t& tableSize, dictionary
 
 		++symbolCount;
 		outputF << currentNode->letter.symbol;
-		bufferSize -= currentCodeSize;
+		bufferSize -= (tableSize == 1 ? 1 : currentCodeSize);
 		buffer = buffer % ((uint64_t) 1 << bufferSize);
 	}
 

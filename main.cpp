@@ -29,6 +29,8 @@ int main(int argc, char* argv[])
 
 	ifstream inputF = ifstream(inputFName, ios_base::binary);
 	ofstream outputF = ofstream(_outputFName, ios_base::binary);
+	if (!inputF || !outputF)
+		return 101;
 
 	uint32_t realFSize = 0, cryptFSize = 0;
 
@@ -48,8 +50,11 @@ int main(int argc, char* argv[])
 	inputF.close();
 	outputF.close();
 
-	remove(outputFName);
-	rename(_outputFName, outputFName);
+//	cerr << "Name sizes: " << outputFName << ", " << _outputFName << endl;
+//	cerr << "Remove: " << remove(outputFName) << endl;
+//	cerr << "Rename: " << rename(_outputFName, outputFName) << endl;
+    remove(outputFName);
+    rename(_outputFName, outputFName);
 
 	uint32_t serviceDataSize = sizeof(tableSize) + sizeof(realFSize) + tableSize * (sizeof(dictionaryRow::code) + sizeof(dictionaryRow::codeSize) + sizeof(dictionaryRow::symbol));
 	if (_key_c)
